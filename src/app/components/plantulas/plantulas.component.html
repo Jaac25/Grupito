@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/src/app/components/plantulas/plantulas.component.css" type="text/css" media="all">
+<script src="/src/app/plantulas/plantulas.component.ts"></script>
+
+<div class="container">
+    <br>
+    <div class="row ">
+        <div class="col-md">
+            <h1>Plántulas</h1>
+        </div>
+    </div>
+    <div class="container row" id="listaPlantulas">
+        <ng-container>
+            <div *ngFor="let plantula of datosPlantulas" class="border col-md-4">
+                <div class="container">
+                    <h4>{{plantula.nombre}}</h4>
+                    
+                </div>
+                <div class="noBorder"></div>
+            </div>
+        </ng-container>
+    </div>
+    <form enctype="multipart/form-data">
+        <label for="nombrePlantulaCrear">Nombre</label>
+        <input type="text" name="" id="nombrePlantulaCrear">
+        <label for="descripcionPlantulaCrear">Descripcion</label>
+        <input type="text" name="" id="descripcionPlantulaCrear">
+        <label for="fotoSemilleroCrear">Foto</label>
+        <input type="file" name="image" id="fotoSemilleroCrear">
+        <button type="submit" (click)="guardarPlantula()">LISTO!</button>
+    </form>

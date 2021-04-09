@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/src/app/shared/nav-bar/nav-bar.component.css" type="text/css" media="all">
+<script src="/src/app/shared/nav-bar/nav-bar.component.ts"></script>
+
+<div id="BoxHeight"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="header">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+         <li routerLinkActive="active">
+            <a class="nav-link" routerLink="/inicio" id="navButtons">Inicio</a>
+         </li>
+         <li routerLinkActive="active">
+            <a class="nav-link" routerLink="/plantulas" id="navButtons">Plántulas</a>
+         </li>
+         <li  routerLinkActive="active">
+            <a class="nav-link" routerLink="/asesoramiento" id="navButtons">Asesoramiento</a>
+         </li>    
+         <li  routerLinkActive="active">
+            <a class="nav-link" routerLink="/about" id="navButtons">Sobre nosotros</a>
+         </li>  
+      </ul>
+   </div>
+   <div id="alinearFin">  
+      <button type="menu" id="botonCerrar" >Salir</button>
+   </div>
+   <button class="btn navbar-brand" (click)='mostrarLogin=true'><img class="card-img-top" src="../../assets/images/LogoSF.png"></button>
+</nav>
+<div id="ventanaLogin" *ngIf="mostrarLogin" class="">
+   <form id="formulario" action='/lugares'>
+      <label for="usuarioLogin">Correo</label>
+      <input type="email" id="entradaLogin" name="usuarioLogin"><br>
+      <label for="contrasenaLogin">Contraseña</label>
+      <input type="password" id="entradaLogin" name="contrasenaLogin"><br><br>
+      <button type="submit" id="botonIniciar" >Iniciar sesión</button>
+      <button type="button" (click)='mostrarLogin=false' id="botonCancelar">Cancelar</button>
+   </form>
+</div>
